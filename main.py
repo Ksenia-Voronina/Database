@@ -4,26 +4,6 @@ import mysql.connector
 from threading import Timer
 
 
-# import logging
-
-# db = {
-#     'host': '127.0.0.1',
-#     'user': 'root',
-#     'password': 'Ksu12345!',
-#     'database': 'dm'
-# }
-
-# logging.basicConfig(level=logging.DEBUG,
-#                     format='%(asctime)s %(levelname)-8s %(message)s',
-#                     datefmt='%Y-%m-%d %H:%M:%S')
-
-# try:
-#     connection = mysql.connector.connect(**db)
-#     logging.info("Connection established successfully.")
-# except Exception as e:
-#     logging.error(f"Failed to connect to MySQL: {e}")
-
-
 # подключение базы данных
 db = mysql.connector.connect(
   host="localhost",
@@ -45,31 +25,6 @@ style.configure('TButton',
                 font = ('calibri', 15, 'bold'),
                 foreground = 'darkblue')
 
-
-############################################# Сохранение данных в таблицу #########################################################
-
-
-# def save_to_db():
-#         global txt_name, txt_lname, txt_patr, lbl_num_ex, txt_fac, txt_dep
-#         a = txt_name.get()
-#         b = txt_lname.get()
-#         c = txt_patr.get()
-#         d = txt_num_ex.get()
-#         e = txt_fac.get()
-#         g = txt_dep.get()
-
-#         mycursor = db.cursor()
-
-#         sql = "INSERT INTO exam (id_exam, name_exam, num_flow, auditorium, date_cons, date_exam) VALUES (%s, %s, %s, %s, %s, %s)"
-#         val = (a, b, c, d, e, g)
-#         mycursor.execute(sql, val)
-
-#         data = mycursor.fetchall()
-
-#         for row in data:
-#             print(data)
-        
-#         db.commit()
 
 ############################################# Добавление абитуриента #########################################################
 
